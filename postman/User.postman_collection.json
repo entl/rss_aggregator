@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "cf56e4e3-6f8f-4468-90ad-ccc564abce42",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25685946",
+		"_collection_link": "https://cloudy-eclipse-572794.postman.co/workspace/rss_aggregator~fbf2f187-d86c-47ca-b04a-71b3d4e160d7/collection/25685946-cf56e4e3-6f8f-4468-90ad-ccc564abce42?action=share&source=collection_link&creator=25685946"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"joe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/v1/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey d1d4367e5b91936a689a26af6a4542a61bcb4eecee25717e505ca40e98c4db50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/v1/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

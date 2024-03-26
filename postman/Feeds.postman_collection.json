@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "ea527d05-ede8-4464-883d-98687d399090",
+		"name": "Feeds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25685946",
+		"_collection_link": "https://cloudy-eclipse-572794.postman.co/workspace/rss_aggregator~fbf2f187-d86c-47ca-b04a-71b3d4e160d7/collection/25685946-ea527d05-ede8-4464-883d-98687d399090?action=share&source=collection_link&creator=25685946"
+	},
+	"item": [
+		{
+			"name": "Get Feeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/v1/feeds",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"feeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Feed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey d1d4367e5b91936a689a26af6a4542a61bcb4eecee25717e505ca40e98c4db50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Lane\",\n    \"url\": \"https://wagslane.dev/index.xml\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/v1/feeds",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"feeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow Feed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey d1d4367e5b91936a689a26af6a4542a61bcb4eecee25717e505ca40e98c4db50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"feed_id\": \"b6a2bd45-d05a-4474-93cf-89a1d54d5585\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/v1/feed_follows",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"feed_follows"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Feeds Follows",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey d1d4367e5b91936a689a26af6a4542a61bcb4eecee25717e505ca40e98c4db50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/v1/feed_follows",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"feed_follows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts of Followed Feed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey d1d4367e5b91936a689a26af6a4542a61bcb4eecee25717e505ca40e98c4db50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/v1/users/feeds",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"users",
+						"feeds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Feeds Follows",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey d1d4367e5b91936a689a26af6a4542a61bcb4eecee25717e505ca40e98c4db50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/v1/feed_follows/c5444a00-a4ec-4355-9cb7-f47868939ec9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"feed_follows",
+						"c5444a00-a4ec-4355-9cb7-f47868939ec9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

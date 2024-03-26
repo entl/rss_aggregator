@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "72c5502a-35be-415f-96ba-a7290d286dca",
+		"name": "General",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25685946",
+		"_collection_link": "https://cloudy-eclipse-572794.postman.co/workspace/rss_aggregator~fbf2f187-d86c-47ca-b04a-71b3d4e160d7/collection/25685946-72c5502a-35be-415f-96ba-a7290d286dca?action=share&source=collection_link&creator=25685946"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/v1/healthz",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"v1",
+						"healthz"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
